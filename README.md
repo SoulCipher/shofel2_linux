@@ -21,6 +21,12 @@ All info taken from [https://gbatemp.net/threads/quick-tuto-how-to-boot-linux-on
 
 All credits go to **natinusala**
 
+**SD Card:**
+
+SD Card Image with Arch Linux rootfs can be downloaded here
+https://drive.google.com/drive/folders/1UY3RcjeQ_0N40GxpzmKZOxABCVCCJqeJ?usp=sharing
+
+Use Etcher, win32 disk imager or dd to write image on SD Card
 
 
 **What you'll need**

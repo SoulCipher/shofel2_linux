@@ -18,6 +18,7 @@ Turn off your Switch
 Ground PIN 10 on right JoyCon rail, press VOL+ and connect USB cable to Switch.
 
 All info taken from [https://gbatemp.net/threads/quick-tuto-how-to-boot-linux-on-your-switch.501918/]
+
 All credits go to **natinusala**
 
 

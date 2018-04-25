@@ -7,33 +7,32 @@ git clone https://github.com/SoulCipher/shofel2_linux.git
 
 I've made a simple script to automate linux boot so hence you have your method to run Switch in RCM mode just run
 
-cd shofel2_linux 
-sudo ./boot_linux.sh
+>cd shofel2_linux 
+>sudo ./boot_linux.sh
 
 Turn off your Switch
 Ground PIN 10 on right JoyCon rail, press VOL+ and connect USB cable to Switch.
 
-All below taken from https://gbatemp.net/threads/quick-tuto-how-to-boot-linux-on-your-switch.501918/
-All credits go to natinusala.
+All info taken from [https://gbatemp.net/threads/quick-tuto-how-to-boot-linux-on-your-switch.501918/]
+All credits go to **natinusala**
 
 
 
-What you'll need
--=-=-=--=-=-=-=-=-
+**What you'll need**
 - A computer running Linux with a blue USB SuperSpeed port, or a Mac
 - A Linux VM can work in theory, but it depends on how the USB passthrough is implemented (apparently VMWare works, VirtualBox doesn't)
 - A USB A-to-C cable (with data support, obviously)
 
 Then, install those dependencies (how to install them and their name might depend on your distribution) :
-python3
-python-dev
-python3-pip
-pyusb 1.0.0 : "$ sudo pip3 install pyusb==1.0.0"
-libusb-1.0-0-dev
+- python3
+- python-dev
+- python3-pip
+- pyusb 1.0.0 : "$ sudo pip3 install pyusb==1.0.0"
+- libusb-1.0-0-dev
 
-Building the rootfs
--=-=-=-=-=-=-=-=-=-
+**Building the rootfs**
 This is the annoying part. Download this file.
+[http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz]
 
 While it's downloading, you'll have to take a microSD card and, using the software of your choice (I used GParted) :
 remove every existing partition to only have unallocated space on it (do I need to tell you that you're going to loose everything on the card ?)

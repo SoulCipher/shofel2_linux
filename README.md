@@ -3,7 +3,9 @@
 This is compiled version of f0f linux kernel for everyone having issues with compiling itself.
 Basically you have to install python3 and pyusb then clone this repo 
 
+```
 git clone https://github.com/SoulCipher/shofel2_linux.git
+```
 
 I've made a simple script to automate linux boot so hence you have your method to run Switch in RCM mode just run
 
@@ -21,6 +23,7 @@ All credits go to **natinusala**
 
 
 **What you'll need**
+
 - A computer running Linux with a blue USB SuperSpeed port, or a Mac
 - A Linux VM can work in theory, but it depends on how the USB passthrough is implemented (apparently VMWare works, VirtualBox doesn't)
 - A USB A-to-C cable (with data support, obviously)
@@ -33,6 +36,7 @@ Then, install those dependencies (how to install them and their name might depen
 - libusb-1.0-0-dev
 
 **Building the rootfs**
+
 This is the annoying part. Download this file.
 [http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz]
 

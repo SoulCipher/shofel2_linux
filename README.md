@@ -7,8 +7,10 @@ git clone https://github.com/SoulCipher/shofel2_linux.git
 
 I've made a simple script to automate linux boot so hence you have your method to run Switch in RCM mode just run
 
->cd shofel2_linux 
->sudo ./boot_linux.sh
+```
+cd shofel2_linux 
+sudo ./boot_linux.sh
+```
 
 Turn off your Switch
 Ground PIN 10 on right JoyCon rail, press VOL+ and connect USB cable to Switch.
@@ -41,12 +43,12 @@ create an ext4 partition on the remaining part of the card - that'll be mmcblk0p
 it's important that the FAT32 partition comes first and the ext4 one comes after - on the Switch, Linux will look for mmcblk0p2, the second partition, if you have scrolling boot logs and then back to RCM it means you did it wrong
 Once the rootfs tarball is downloaded, you can simple extract it to the mounting point of the ext4 partition you just created :
 
-Code:
-$ tar xvf ArchLinuxARM-aarch64-latest.tar.gz -C /mounting/point/of/ext4/partition
-$ cp ArchLinuxARM-aarch64-latest.tar.gz /mounting/point/of/ext4/partition/root("/mounting/point/of/ext4/partition/root" is the "root" directory on the partition)
+```
+tar xvf ArchLinuxARM-aarch64-latest.tar.gz -C /mounting/point/of/ext4/partition
+cp ArchLinuxARM-aarch64-latest.tar.gz /mounting/point/of/ext4/partition/root
+```
 
 Then you can put the SD card in the console.
-
 
 **************************************************************************************************************************************
 You will most likely need a 1.8V serial cable connected to the right hand side Joy-Con port to do anything useful with this at this point. Please do not bug us with questions about how to get this to run if you do not have a means to debug things yourself. This is not ready for end users. If you really want to try configuring your Linux image standalone to boot with WiFi or X support to get something done without a serial console, you're on your own and you get to suffer through the pain all by yourself. Hint: WiFi is broken on the first boot, you need to reboot on the first Linux launch (which puts you back into RCM mode), and then run the exploit again. Patches welcome.

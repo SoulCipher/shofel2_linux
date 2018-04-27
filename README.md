@@ -25,6 +25,7 @@ All credits go to **natinusala** & others.
 **SD Card:**
 
 SD Card Image with Arch Linux rootfs can be downloaded here. It contains autologin LXDE environment with mesa hw accell and touchscreen support.
+
 https://drive.google.com/open?id=1VIH3GWtBrM4uuVQOQopASYZy4x3Jw1Uv
 
 Use Etcher, win32 disk imager or dd to write image on SD Card

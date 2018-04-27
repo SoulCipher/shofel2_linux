@@ -62,6 +62,8 @@ method=auto
 addr-gen-mode=stable-privacy
 ```
 
+**In case you'd like to build everything yourself follow this guide**
+
 **What you'll need**
 
 - A computer running Linux with a blue USB SuperSpeed port, or a Mac

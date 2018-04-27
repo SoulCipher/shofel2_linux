@@ -7,6 +7,8 @@ Basically you have to install python3 and pyusb then clone this repo
 git clone https://github.com/SoulCipher/shofel2_linux.git
 ```
 
+Above repo contains kernel with WiFi, touchscreen support etc.
+
 I've made a simple script to automate linux boot so hence you have your method to run Switch in RCM mode just run
 
 ```
@@ -17,17 +19,47 @@ sudo ./boot_linux.sh
 Turn off your Switch
 Ground PIN 10 on right JoyCon rail, press VOL+ and connect USB cable to Switch.
 
-All info taken from [https://gbatemp.net/threads/quick-tuto-how-to-boot-linux-on-your-switch.501918/]
-
-All credits go to **natinusala**
+All info taken from https://gbatemp.net/threads/quick-tuto-how-to-boot-linux-on-your-switch.501918/
+All credits go to **natinusala** & others.
 
 **SD Card:**
 
-SD Card Image with Arch Linux rootfs can be downloaded here
-https://drive.google.com/drive/folders/1UY3RcjeQ_0N40GxpzmKZOxABCVCCJqeJ?usp=sharing
+SD Card Image with Arch Linux rootfs can be downloaded here. It contains autologin LXDE environment with mesa hw accell and touchscreen support.
+https://drive.google.com/open?id=1VIH3GWtBrM4uuVQOQopASYZy4x3Jw1Uv
 
 Use Etcher, win32 disk imager or dd to write image on SD Card
 
+The easiest way to configure network is to mount sd card ext4 rootfs partition under host linux and edit file 
+
+> etc/NetworkManager/system-connections/Gigaspot
+
+Just type your ssid and password. After initial linux boot WiFi will not work, you have manually reboot it and reexploit it once again (without shutting down console power) to make WiFi working. This is known issue.
+
+```
+[connection]
+id=Habitat-MT
+uuid=d58b2c66-a1cd-4ac3-b513-4773dae8d0de
+type=wifi
+permissions=user:alarm:;
+timestamp=1524733286
+
+[wifi]
+mac-address-blacklist=
+mode=infrastructure
+seen-bssids=30:B5:C2:08:20:29;
+ssid=Your_Access_Point_Name
+
+[wifi-security]
+key-mgmt=wpa-psk
+psk=Pa$$w0rd
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+```
 
 **What you'll need**
 

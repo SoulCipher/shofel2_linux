@@ -207,7 +207,7 @@ class RCM:
         tty_mode = True
         while tty_mode:
             try:
-                data = s.ep1_read(4096).tostring()
+                data = s.ep1_read(4096).tobytes()
                 if data == "\xde\xad\xbe\xef":
                     tty_mode = False
                     print('>>> Switching to dumping mode...')
@@ -230,7 +230,7 @@ class RCM:
         fp = open('../dump.bin', 'wb')
         recvd_size = 0
         while True:
-            data = s.ep1_read(4096).tostring()
+            data = s.ep1_read(4096).tobytes()
             if len(data) == 20:
                 # Last block, SHA1
                 print('>>> Done! Expected sha1:', data.encode('hex'),
